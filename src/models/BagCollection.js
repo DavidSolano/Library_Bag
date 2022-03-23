@@ -17,6 +17,4 @@ export default function BagCollection(){
 
         return this;
     }
-
-
 }

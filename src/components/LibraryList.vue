@@ -1,6 +1,6 @@
 <template>
   <div class="card-columns">
-    <library-item v-for="(item, i) in library" :key="i" :item="item"></library-item>
+    <library-item @add-cart="update" v-for="(item, i) in library" :key="i" :item="item"></library-item>
   </div>
 </template>
 
@@ -24,6 +24,12 @@ export default {
       page: 1
     }
   },
+
+  methods: {
+    update(y){
+      this.$emit('update-cart', y)
+    }
+  }
 
 }
 </script>
